@@ -101,6 +101,8 @@ try {
 
     $analyzeRepoParams = @{}
 
+    Write-Host "artifact $($artifact)"
+
     if ($artifact) {
         # Avoid checking the artifact setting in AnalyzeRepo if we have an artifactUrl
         $settings.artifact = $artifact
@@ -272,9 +274,12 @@ try {
     $additionalCountries = $settings.additionalCountries
     Write-Host "additionalCountries : $($additionalCountries)"
     
+    Write-Host "gitHubHostedRunner : $($gitHubHostedRunner)"
+
     $imageName = ""
     if (-not $gitHubHostedRunner) {
         $imageName = $settings.cacheImageName
+        Write-Host "imageName : $($imageName)"
         if ($imageName) {
             Write-Host "::group::Flush ContainerHelper Cache"
             Flush-ContainerHelperCache -cache 'all,exitedcontainers' -keepdays $settings.cacheKeepDays
