@@ -268,7 +268,8 @@ try {
     }
 
     $additionalCountries = $settings.additionalCountries
-
+    Write-Host "additionalCountries : $($additionalCountries)"
+    
     $imageName = ""
     if (-not $gitHubHostedRunner) {
         $imageName = $settings.cacheImageName
@@ -281,6 +282,8 @@ try {
     $authContext = $null
     $environmentName = ""
     $CreateRuntimePackages = $false
+
+    Write-Host "versioningStrategy : $($settings.versioningStrategy)"
 
     if ($settings.versioningStrategy -eq -1) {
         $artifactVersion = [Version]$settings.artifact.Split('/')[4]
@@ -295,6 +298,8 @@ try {
             "appVersion" = $settings.repoVersion
         }
     }
+
+    Write-Host "runAlPipelineParams : $($runAlPipelineParams)"
 
     $allTestResults = "testresults*.xml"
     $testResultsFile = Join-Path $projectPath "TestResults.xml"
