@@ -45,7 +45,7 @@ function GetWorkflowConclusion($JobContext) {
 }
 
 function GetAlGoVersion($ActionsRepo, $ActionRef) {
-    if ($ActionsRepo -eq "microsoft/AL-Go") {
+    if ($ActionsRepo -eq "FloFOS/AL-Go") {
         return "Preview"
     } elseif($ActionsRepo -notlike "microsoft/*") {
         return "Developer/Private"

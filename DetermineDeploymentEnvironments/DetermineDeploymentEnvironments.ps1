@@ -175,7 +175,7 @@ else {
                     if ($null -ne $deploymentSettings."$key" -and $null -ne $deployTo."$key" -and $deploymentSettings."$key".GetType().Name -ne $deployTo."$key".GetType().Name) {
                         if ($key -eq "runs-on" -and $deployTo."$key" -is [Object[]]) {
                             # Support setting runs-on as an array in settings to not break old settings
-                            # See https://github.com/microsoft/AL-Go/issues/1182
+                            # See https://github.com/FloFOS/AL-Go/issues/1182
                             $deployTo."$key" = $deployTo."$key" -join ','
                         }
                         else {

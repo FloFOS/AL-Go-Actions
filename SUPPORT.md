@@ -2,9 +2,9 @@
 
 ## How to file issues and get help
 
-This GitHub repo is auto-generated from https://github.com/microsoft/AL-Go. Issues, bug tracking and feature requests should be done there.
+This GitHub repo is auto-generated from https://github.com/FloFOS/AL-Go. Issues, bug tracking and feature requests should be done there.
 
-Please follow the documentation [here](https://github.com/microsoft/AL-Go/blob/main/Scenarios/Contribute.md) if you want to contribute to AL-Go for GitHub.
+Please follow the documentation [here](https://github.com/FloFOS/AL-Go/blob/main/Scenarios/Contribute.md) if you want to contribute to AL-Go for GitHub.
 
 ## Microsoft Support Policy
 

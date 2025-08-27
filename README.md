@@ -32,7 +32,7 @@ Please go to https://aka.ms/AL-Go to learn more.
 
 ## Contributing
 
-Please read [this](https://github.com/microsoft/AL-Go/blob/main/Scenarios/Contribute.md) description on how to contribute to AL-Go for GitHub.
+Please read [this](https://github.com/FloFOS/AL-Go/blob/main/Scenarios/Contribute.md) description on how to contribute to AL-Go for GitHub.
 
 We do not accept Pull Requests on the Actions repository directly.
 

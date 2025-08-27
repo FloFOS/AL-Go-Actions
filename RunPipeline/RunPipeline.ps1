@@ -104,6 +104,8 @@ try {
     if ($artifact) {
         # Avoid checking the artifact setting in AnalyzeRepo if we have an artifactUrl
         $settings.artifact = $artifact
+        Write-Host "artifact : $($settings.artifact)"
+        Write-Host "gitHubRunner : $($settings.gitHubRunner)"
         $gitHubHostedRunner = $settings.gitHubRunner -like "windows-*" -or $settings.gitHubRunner -like "ubuntu-*"
         if ($gitHubHostedRunner -and $settings.useCompilerFolder) {
             # If we are running GitHub hosted agents and UseCompilerFolder is set (and we have an artifactUrl), we need to set the artifactCachePath

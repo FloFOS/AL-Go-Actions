@@ -55,7 +55,7 @@ $summaryMD = @"
 # Troubleshooting
 This workflow runs a number of tests to check if the repository is configured correctly. This workflow is work-in-progress and will be updated with more tests over time.
 
-Please follow and/or include any recommendations here before [creating an issue on GitHub](https://github.com/microsoft/AL-Go/issues)`n`n
+Please follow and/or include any recommendations here before [creating an issue on GitHub](https://github.com/FloFOS/AL-Go/issues)`n`n
 "@
 
 $summaryMD += (@("## Errors") + $script:errors + @("## Warnings") + $script:warnings + @("## Suggestions") + $script:suggestions) -join "`n"

@@ -382,11 +382,11 @@ function ReplaceOwnerRepoAndBranch {
 
     $lines = $srcContent.Value.Split("`n")
 
-    # The Original Owner and Repo in the AL-Go repository are microsoft/AL-Go-Actions, microsoft/AL-Go-PTE and microsoft/AL-Go-AppSource
+    # The Original Owner and Repo in the AL-Go repository are FloFOS/AL-Go-Actions, FloFOS/AL-Go-PTE and FloFOS/AL-Go-AppSource
     $originalOwnerAndRepo = @{
-        "actionsRepo" = "microsoft/AL-Go-Actions"
-        "perTenantExtensionRepo" = "microsoft/AL-Go-PTE"
-        "appSourceAppRepo" = "microsoft/AL-Go-AppSource"
+        "actionsRepo" = "FloFOS/AL-Go-Actions"
+        "perTenantExtensionRepo" = "FloFOS/AL-Go-PTE"
+        "appSourceAppRepo" = "FloFOS/AL-Go-AppSource"
     }
     # Original branch is always main
     $originalBranch = "main"
@@ -418,8 +418,8 @@ function IsDirectALGo {
     )
     $directALGo = $templateUrl -like 'https://github.com/*/AL-Go@*'
     if ($directALGo) {
-        if ($templateUrl -like 'https://github.com/microsoft/AL-Go@*' -and -not ($templateUrl -like 'https://github.com/microsoft/AL-Go@*/*')) {
-            throw "You cannot use microsoft/AL-Go as a template repository. Please use microsoft/AL-Go-PTE, microsoft/AL-Go-AppSource or a fork of AL-Go instead."
+        if ($templateUrl -like 'https://github.com/FloFOS/AL-Go@*' -and -not ($templateUrl -like 'https://github.com/FloFOS/AL-Go@*/*')) {
+            throw "You cannot use FloFOS/AL-Go as a template repository. Please use FloFOS/AL-Go-PTE, FloFOS/AL-Go-AppSource or a fork of AL-Go instead."
         }
     }
     return $directALGo
