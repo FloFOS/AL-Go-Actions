@@ -963,6 +963,12 @@ function ResolveProjectFolders {
 
             foreach ($folder in $folders) {
                 $aLProjectFolder = Join-Path $projectPath $folder
+                OutputDebug "Resolving folder '$folder' for project '$project' to '$aLProjectFolder'"
+                OutputDebug "Checking for app.json in '$aLProjectFolder'"
+                OutputDebug "Folder content:"
+                Get-ChildItem -Path $aLProjectFolder -Recurse | ForEach-Object {
+                    OutputDebug "  $_"
+                }
                 $resolvedALProjectsPaths = Resolve-Path $aLProjectFolder -Relative -ErrorAction Ignore | Where-Object { Test-Path (Join-Path $_ 'app.json') }
 
                 if ($resolvedALProjectsPaths) {
