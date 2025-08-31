@@ -251,6 +251,7 @@ try {
         Write-Host "::group::Locating previous release"
         try {
             $latestRelease = GetLatestRelease -token $token -api_url $ENV:GITHUB_API_URL -repository $ENV:GITHUB_REPOSITORY -ref $ENV:GITHUB_REF_NAME
+            Write-Host "latestRelease : $($latestRelease)"
             if ($latestRelease) {
                 Write-Host "Using $($latestRelease.name) (tag $($latestRelease.tag_name)) as previous release"
                 $artifactsFolder = Join-Path $baseFolder "artifacts"
