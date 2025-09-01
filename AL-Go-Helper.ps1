@@ -966,7 +966,7 @@ function ResolveProjectFolders {
                 OutputWarning "Resolving folder '$folder' for project '$project' to '$aLProjectFolder'"
                 OutputWarning "Checking for app.json in '$aLProjectFolder'"
                 OutputWarning "Folder content:"
-                Get-ChildItem -Path $aLProjectFolder -Recurse | ForEach-Object {
+                Get-ChildItem -Path $projectPath -Recurse | ForEach-Object {
                     OutputWarning "  $_"
                 }
                 $resolvedALProjectsPaths = Resolve-Path $aLProjectFolder -Relative -ErrorAction Ignore | Where-Object { Test-Path (Join-Path $_ 'app.json') }
